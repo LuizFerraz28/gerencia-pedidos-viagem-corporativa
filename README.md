@@ -123,7 +123,7 @@ Dentro do container:
 ```bash
 # Instala composer
 composer install
-composer dump_autoload
+composer dump-autoload
 
 # Gera APP_KEY e JWT_SECRET no .env
 php artisan key:generate
