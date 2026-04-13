@@ -1,6 +1,6 @@
 # Gerência de Pedidos de Viagem Corporativa
 
-API REST para gerenciamento de pedidos de viagem corporativa, desenvolvida em Laravel 12 com arquitetura DDD (Domain-Driven Design) e autenticação via JWT.
+API REST para gerenciamento de pedidos de viagem corporativa, desenvolvida em Laravel 13 com arquitetura DDD (Domain-Driven Design) e autenticação via JWT.
 
 ---
 
@@ -26,7 +26,7 @@ Escolhido JWT em vez de Sanctum porque o enunciado menciona microsserviços: JWT
 
 A lógica de quem pode aprovar/cancelar/ver pedidos fica em `TravelOrderPolicy`, registrada no `AppServiceProvider`. O controller delega ao `Gate::authorize()`, mantendo o código limpo e testável.
 
-### Status como Enum PHP 8.1+
+### Status como Enum
 
 `TravelOrderStatus` é um `enum` backed string com o método `canTransitionTo()`, que encapsula a máquina de estados (`solicitado → aprovado | cancelado`, `aprovado → cancelado`). Violações lançam `TravelOrderException`, tratada centralmente no `bootstrap/app.php`.
 
@@ -121,6 +121,10 @@ docker exec -it app bash
 Dentro do container:
 
 ```bash
+# Instala composer
+composer install
+composer dump_autoload
+
 # Gera APP_KEY e JWT_SECRET no .env
 php artisan key:generate
 php artisan jwt:secret
