@@ -46,7 +46,7 @@ Ao aprovar ou cancelar um pedido, um evento de domínio (`TravelOrderApproved` /
 | Tecnologia | Versão |
 |---|---|
 | PHP | 8.4 |
-| Laravel | 12.x |
+| Laravel | 13.x |
 | MySQL | 8.0 |
 | Redis | latest (alpine) |
 | Nginx | latest (alpine) |
