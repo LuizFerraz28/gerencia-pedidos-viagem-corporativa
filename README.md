@@ -68,7 +68,7 @@ Ao aprovar ou cancelar um pedido, um evento de domínio (`TravelOrderApproved` /
 
 ```bash
 git clone <URL_DO_REPOSITORIO>
-cd gerencia-pedidos
+cd gerencia-pedidos-viagem-corporativa
 ```
 
 ### 2. Configure as variáveis de ambiente
